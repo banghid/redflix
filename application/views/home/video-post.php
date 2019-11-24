@@ -184,7 +184,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="single-video-area">
-                        <iframe src="http://192.168.43.68/index.php/s/2w6CoEi9RNeQ8J7/download" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="<?php echo base_url('home/videoPlayer/1') ?>" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
