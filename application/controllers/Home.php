@@ -22,13 +22,13 @@ class Home extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
-        $this->load->model('VideoModel','video');
-        $config = array(
-            'hostname' => '192.168.43.239',
-            'username' => 'root',
-            'password' => '123160044'
-        );
-        $this->ftp->connect($config);
+        // $this->load->model('VideoModel','video');
+        // $config = array(
+        //     'hostname' => '192.168.43.239',
+        //     'username' => 'root',
+        //     'password' => '123160044'
+        // );
+        // $this->ftp->connect($config);
         // $this->ftp->mirror('/asset/video/', '/mnt/redflix/');
     }
 
