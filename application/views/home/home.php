@@ -125,7 +125,7 @@
                             <!-- Single Feature Post -->
                             <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/7.jpg);">
                                 <!-- Play Button -->
-                                <a href="<?php echo base_url('home/videoPost') ?>" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                                <a href="<?php echo base_url('Home/videoPost') ?>" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
 
                                 <!-- Post Content -->
                                 <div class="post-content">
