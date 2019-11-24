@@ -184,7 +184,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="single-video-area">
-                        <iframe src="<?php echo base_url('home/videoPlayer/1') ?>" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe src="<?php echo base_url('home/videoPlayer/1') ?>" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <video width="1100" controls>
+                            <source src="http://192.168.43.68/index.php/apps/sharingpath/admin/Nextcloud intro.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
                     </div>
                 </div>
             </div>
