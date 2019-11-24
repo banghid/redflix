@@ -38,8 +38,8 @@ class Home extends CI_Controller {
     
     public function videoPost(){
     
-        $video = $this->video->getData(array('vid_id' => '1'));   
-        $this->load->view('home/video-post' , $video);
+        // $video = $this->video->getData(array('vid_id' => '1'));   
+        $this->load->view('home/video-post' );
     }
 
     public function videoPlayer($id){
