@@ -33,7 +33,9 @@ class Home extends CI_Controller {
     }
 
 	public function index(){
-		$this->load->view('home/home');
+        // $this->load->view('home/home');
+        $video = $this->video->getData(array('vid_id' => '1'));   
+        $this->load->view('home/video-post' , $video);
     }
     
     public function videoPost(){
