@@ -69,7 +69,7 @@
                                 </form>
                             </div>
                             <!-- Login -->
-                            <a href="<?php echo base_url('auth') ?>" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            <a href="<?php echo site_url('auth') ?>" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     <nav class="classy-navbar justify-content-between" id="vizewNav">
 
                         <!-- Nav brand -->
-                        <a href="<?php echo base_url('home') ?>" class="nav-brand"><img src="<?php echo base_url('asset/img/logo-img/default-monochrome-white.png') ?>" alt=""></a>
+                        <a href="<?php echo site_url('home') ?>" class="nav-brand"><img src="<?php echo base_url('asset/img/logo-img/default-monochrome-white.png') ?>" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -102,8 +102,8 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li class="active"><a href="<?php echo base_url('home') ?>">Home</a></li>
-                                    <li><a href="<?php echo base_url('auth') ?>">Contact</a></li>
+                                    <li class="active"><a href="<?php echo site_url('home') ?>">Home</a></li>
+                                    <li><a href="<?php echo site_url('auth') ?>">Contact</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->

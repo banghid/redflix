@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
 </head>
 <body>
-<video width="1100" controls>
-  <source src="http://192.168.43.68/index.php/apps/sharingpath/admin/Nextcloud intro.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
+  <video id="player" width="1100" playsinline controls>
+    <source src="http://192.168.43.68/index.php/apps/sharingpath/admin/Nextcloud intro.mp4" type="video/mp4" />
+    <!-- <source src="/path/to/video.webm" type="video/webm" />                    -->
+  </video>
+  
+  <!-- Plyr video player -->
+  <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
 </body>
 </html>

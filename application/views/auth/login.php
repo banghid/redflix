@@ -69,7 +69,7 @@
                                 </form>
                             </div>
                             <!-- Login -->
-                            <a href="<?php echo base_url('auth') ?>" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            <a href="<?php echo site_url('auth') ?>" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     <nav class="classy-navbar justify-content-between" id="vizewNav">
 
                         <!-- Nav brand -->
-                        <a href="<?php echo base_url('home') ?>" class="nav-brand"><img src="<?php echo base_url('asset/img/logo-img/default-monochrome-white.png') ?>" alt=""></a>
+                        <a href="<?php echo site_url('home') ?>" class="nav-brand"><img src="<?php echo base_url('asset/img/logo-img/default-monochrome-white.png') ?>" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -102,7 +102,7 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li class="active"><a href="<?php echo base_url('home') ?>">Home</a></li>
+                                    <li class="active"><a href="<?php echo site_url('home') ?>">Home</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
@@ -148,7 +148,7 @@
                             <div class="line"></div>
                         </div>
 
-                        <form action="<?php echo base_url('auth/authenticate') ?>" method="post">
+                        <form action="<?php echo site_url('auth/authenticate') ?>" method="post">
                             <div class="form-group">
                                 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email or User Name" name='email'>
                             </div>
@@ -163,7 +163,7 @@
                             </div>
                             <button type="submit" class="btn vizew-btn w-100 mt-30">Login</button>
                         </form>
-                        <a href="<?php echo base_url('auth/register') ?>" class="btn vizew-btn w-100 mt-30">Register</a>
+                        <a href="<?php echo site_url('auth/register') ?>" class="btn vizew-btn w-100 mt-30">Register</a>
                     </div>
                 </div>
             </div>

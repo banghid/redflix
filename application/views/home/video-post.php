@@ -17,8 +17,6 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="<?php echo base_url('asset/style.css') ?>">
 
-    <!-- Plyr CSS -->
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
 
 </head>
 
@@ -73,7 +71,7 @@
                                 </form>
                             </div>
                             <!-- Login -->
-                            <a href="<?php echo base_url('auth') ?>" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            <a href="<?php echo site_url('auth') ?>" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -89,7 +87,7 @@
                     <nav class="classy-navbar justify-content-between" id="vizewNav">
 
                         <!-- Nav brand -->
-                        <a href="<?php echo base_url('home') ?>" class="nav-brand"><img src="<?php echo base_url('asset/img/logo-img/default-monochrome-white.png') ?>" alt=""></a>
+                        <a href="<?php echo site_url('home') ?>" class="nav-brand"><img src="<?php echo base_url('asset/img/logo-img/default-monochrome-white.png') ?>" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -106,7 +104,7 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li class="active"><a href="<?php echo base_url('home') ?>">Home</a></li>
+                                    <li class="active"><a href="<?php echo site_url('home') ?>">Home</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
@@ -187,11 +185,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="single-video-area">
-                        <!-- <iframe src="<?php echo base_url('home/videoPlayer/1') ?>" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        <video id="player" width="1100" playsinline controls>
-                                <source src="http://192.168.43.68/index.php/apps/sharingpath/admin/Nextcloud intro.mp4" type="video/mp4" />
-                                <!-- <source src="/path/to/video.webm" type="video/webm" />                    -->
-                        </video>
+                        <iframe src="<?php echo site_url('home/videoPlayer/1') ?>" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -869,8 +863,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="<?php echo base_url('asset/js/plugins/plugins.js') ?>"></script>
     <!-- Active js -->
     <script src="<?php echo base_url('asset/js/active.js') ?>"></script>
-    <!-- Plyr video player -->
-    <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+    
 </body>
 
 </html>
