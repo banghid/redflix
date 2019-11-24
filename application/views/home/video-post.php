@@ -17,6 +17,9 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="<?php echo base_url('asset/style.css') ?>">
 
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
+
 </head>
 
 <body>
@@ -185,9 +188,9 @@
                 <div class="col-12">
                     <div class="single-video-area">
                         <!-- <iframe src="<?php echo base_url('home/videoPlayer/1') ?>" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        <video width="1100" controls>
-                            <source src="http://192.168.43.68/index.php/apps/sharingpath/admin/Nextcloud intro.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
+                        <video id="player" playsinline controls>
+                                <source src="http://192.168.43.68/index.php/apps/sharingpath/admin/Nextcloud intro.mp4" type="video/mp4" />
+                                <!-- <source src="/path/to/video.webm" type="video/webm" />                    -->
                         </video>
                     </div>
                 </div>
@@ -866,6 +869,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="<?php echo base_url('asset/js/plugins/plugins.js') ?>"></script>
     <!-- Active js -->
     <script src="<?php echo base_url('asset/js/active.js') ?>"></script>
+    <!-- Plyr video player -->
+    <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
 </body>
 
 </html>
