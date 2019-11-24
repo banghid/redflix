@@ -188,7 +188,7 @@
                 <div class="col-12">
                     <div class="single-video-area">
                         <!-- <iframe src="<?php echo base_url('home/videoPlayer/1') ?>" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        <video id="player" playsinline controls>
+                        <video id="player" width="1100" playsinline controls>
                                 <source src="http://192.168.43.68/index.php/apps/sharingpath/admin/Nextcloud intro.mp4" type="video/mp4" />
                                 <!-- <source src="/path/to/video.webm" type="video/webm" />                    -->
                         </video>
