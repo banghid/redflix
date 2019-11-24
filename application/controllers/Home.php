@@ -29,8 +29,7 @@ class Home extends CI_Controller {
             'password' => '123160044'
         );
         $this->ftp->connect($config);
-        $this->ftp->mirror(base_url('asset/video/'), '/mnt/Video-storage/');
-        $this->ftp->close();
+        $this->ftp->mirror('/asset/video/', '/mnt/redflix/');
     }
 
 	public function index(){
