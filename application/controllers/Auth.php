@@ -51,7 +51,7 @@ class Auth extends CI_Controller {
                     'login_status' => TRUE
                 );
                 $this->session->set_userdata($data);
-                redirect(base_url('user'));
+                redirect(site_url('user'));
             }else redirect('auth?m=Password Salah');
     
         }else{
