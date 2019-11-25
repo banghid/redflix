@@ -103,7 +103,7 @@
                             <div class="classynav">
                                 <ul>
                                     <li class="active"><a href="<?php echo site_url('home') ?>">Home</a></li>
-                                    <li><a href="<?php echo site_url('auth') ?>">Contact</a></li>
+                                    <li><a href="<?php echo site_url('user') ?>">Video Control</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->

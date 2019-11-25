@@ -18,9 +18,16 @@ class Uploader extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function __construct(){
+		parent::__construct();
+		if(!isset($this->session->login_status)){
+			redirect(site_url('auth?m=Need a Credential!'));
+		}
+	}
+
 	public function index()
 	{
-        echo 'welcome';
-		// $this->load->view('welcome_message');
+        $this->load->view('user/video-control');
 	}
 }
