@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
 </head>
 <body>
-  <video id="player" width="1100" playsinline controls>
+  <video id="player" playsinline controls>
     <source src="http://192.168.43.68/index.php/apps/sharingpath/admin/Nextcloud intro.mp4" type="video/mp4" />
     <!-- <source src="/path/to/video.webm" type="video/webm" />                    -->
   </video>
