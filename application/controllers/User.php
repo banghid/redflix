@@ -30,4 +30,9 @@ class User extends CI_Controller {
 	{
         $this->load->view('user/video-control');
 	}
+
+	public function logout(){
+		$this->session->sess_destroy();
+		redirect(site_url('home'));
+	}
 }
