@@ -106,7 +106,7 @@
                                     <li><a href="<?php echo site_url('user') ?>">Video Control</a></li>
                                     <?php 
                                     if(isset($_SESSION['login_status'])){
-                                        echo "<li><a href='".site_url('user')."'>Video Control</a></li>";
+                                        echo "<li><a href='".site_url('user')."'>Logout</a></li>";
                                     }
                                     ?>
                                 </ul>
