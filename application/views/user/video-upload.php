@@ -123,7 +123,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Registration</li>
+                            <li class="breadcrumb-item active" aria-current="page">Video Upload</li>
                         </ol>
                     </nav>
                 </div>
@@ -139,7 +139,7 @@
                 <div class="col-12 col-md-7 col-lg-8">
                     <!-- Section Heading -->
                     <div class="section-heading style-2">
-                        <h4>Registration</h4>
+                        <h4>Video Upload</h4>
                         <div class="line"></div>
                     </div>
 
@@ -150,11 +150,11 @@
                         <form action="" method="post">
                             <div class="form-group">
                                 <label for="title">Title*</label>
-                                <input type="text" class="form-control" id="title" name="nama">
+                                <input type="text" class="form-control" id="title" name="nama" require>
                             </div>
                             <div class="form-group">
                                 <label for="video-file">Email*</label>
-                                <input type="file" class="form-control" id="video" name="video">
+                                <input type="file" class="form-control" id="video" name="video" require>
                             </div>
                             <button class="btn vizew-btn mt-30" type="submit">Upload</button>
                         </form>

@@ -1,5 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+use Sabre\DAV\Client;
+include 'vendor/autoload.php';
 
 class User extends CI_Controller {
 
@@ -24,6 +26,7 @@ class User extends CI_Controller {
 		if(!isset($this->session->login_status)){
 			redirect(site_url('auth?m=Need a Credential!'));
 		}
+		$this->load->model('VideoModel','video');
 	}
 
 	public function index()
@@ -37,6 +40,31 @@ class User extends CI_Controller {
 	}
 
 	public function uploadForm(){
-		$this->load->view('user/video-upload');
+
+		if(isset($_POST['title'])){
+			$title = $this->input->post('title');
+			$file = $_FILES['video']['name'];
+			$base_location = 'http://192.168.43.68/index.php/apps/sharingpath/admin/';
+			$setting = array(
+				'baseUri' => 'http://192.168.43.68/remote.php/webdav/',
+    			'userName' => 'admin',
+    			'password' => 'admin'
+			);
+
+			$client = new Client($setting);
+			$response = $client->request('PUT',$file,$_FILE['video']['name']);
+			
+			$this->video->insertData(array(
+				'title' => $title,
+				'location' => $base_location.$file
+			));
+
+			$this->session->set_flashdata("<script> window.alert('Upload success'); </script>")
+			
+		}else{
+			$this->load->view('user/video-upload');
+		}
+
+		
 	}
 }
