@@ -149,18 +149,14 @@
                     <div class="contact-form-area mt-50">
                         <form action="" method="post">
                             <div class="form-group">
-                                <label for="name">Name*</label>
-                                <input type="text" class="form-control" id="name" name="nama">
+                                <label for="title">Title*</label>
+                                <input type="text" class="form-control" id="title" name="nama">
                             </div>
                             <div class="form-group">
-                                <label for="email">Email*</label>
-                                <input type="email" class="form-control" id="email" name="email">
+                                <label for="video-file">Email*</label>
+                                <input type="file" class="form-control" id="video" name="video">
                             </div>
-                            <div class="form-group">
-                                <label for="message">Password*</label>
-                                <input type="password" class="form-control" id="email" name="password">
-                            </div>
-                            <button class="btn vizew-btn mt-30" type="submit">Register</button>
+                            <button class="btn vizew-btn mt-30" type="submit">Upload</button>
                         </form>
                     </div>
                 </div>
