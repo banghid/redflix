@@ -17,11 +17,9 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="<?php echo base_url('asset/style.css') ?>">
 
-
 </head>
 
 <body>
-    <!-- Preloader -->
     <!-- Preloader -->
     <!-- <div class="preloader d-flex align-items-center justify-content-center">
         <div class="lds-ellipsis">
@@ -106,12 +104,6 @@
                                 <ul>
                                     <li class="active"><a href="<?php echo site_url('home') ?>">Home</a></li>
                                     <li><a href="<?php echo site_url('user') ?>">Video Control</a></li>
-                                    <?php 
-                                    if(isset($_SESSION['login_status'])){
-                                        echo "<li><a href='".site_url('user/logout')."'>Akun</a></li>";
-                                        echo "<li><a href='".site_url('user/logout')."'>Logout</a></li>";
-                                    }
-                                    ?>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -123,16 +115,15 @@
     </header>
     <!-- ##### Header Area End ##### -->
 
-<!-- ##### Breadcrumb Area Start ##### -->
-<div class="vizew-breadcrumb">
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="vizew-breadcrumb">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Feature</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Archive by Category SPORTS</li>
+                            <li class="breadcrumb-item active" aria-current="page">Registration</li>
                         </ol>
                     </nav>
                 </div>
@@ -141,113 +132,72 @@
     </div>
     <!-- ##### Breadcrumb Area End ##### -->
 
-    <!-- ##### Archive Grid Posts Area Start ##### -->
-    <div class="vizew-grid-posts-area mb-80">
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area mb-80">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-lg-8">
-                    <!-- Archive Catagory & View Options -->
-                    <div class="archive-catagory-view mb-50 d-flex align-items-center justify-content-between">
-                        <!-- Catagory -->
-                        <div class="archive-catagory">
-                            <h4><i class="fa fa-trophy" aria-hidden="true"></i> Sports</h4>
-                        </div>
-                        <!-- View Options -->
-                        <div class="view-options">
-                            <a href="archive-grid.html" class="active"><i class="fa fa-th-large" aria-hidden="true"></i></a>
-                            <a href="archive-list.html"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
-                        </div>
+                <div class="col-12 col-md-7 col-lg-8">
+                    <!-- Section Heading -->
+                    <div class="section-heading style-2">
+                        <h4>Registration</h4>
+                        <div class="line"></div>
                     </div>
 
-                    <div class="row">
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
-                                <!-- Post Thumbnail -->
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/12.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
-                                    <!-- Video Duration -->
-                                    <span class="video-duration">05.03</span>
-                                </div>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">May fights on after Johnson savages Brexit approach</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 22</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 16</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 15</a>
-                                    </div>
-                                </div>
+                    <!-- Contact Form Area -->
+                    <div class="contact-form-area mt-50">
+                        <form action="" method="post">
+                        <div class="form-group">
+                                <label for="user_id">Name*</label>
+                                <input type="hidden" class="form-control" id="user_id" name="user_id"  value=<?= $user_id?>>
                             </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
-                                <!-- Post Thumbnail -->
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/39.jpg" alt="">
-
-                                    <!-- Video Duration -->
-                                    <span class="video-duration">05.03</span>
-                                </div>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Thailand cave rescue: Boys 'doing well' after spending night</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 28</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 17</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <label for="name">Name*</label>
+                                <input type="text" class="form-control" id="name" name="nama"  value=<?= $nama?>>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label for="email">Email*</label>
+                                <input type="email" class="form-control" id="email" name="email" value=<?= $email?>>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Password*</label>
+                                <input type="password" class="form-control" id="email" name="password">
+                            </div>
+                            <button class="btn vizew-btn mt-30" type="submit">Update</button>
+                        </form>
                     </div>
-
-                    <!-- Pagination -->
-                    <nav class="mt-50">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
-                        </ul>
-                    </nav>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-5 col-lg-4">
                     <div class="sidebar-area">
-
                         <!-- ***** Single Widget ***** -->
-                        <div class="single-widget followers-widget mb-50">
-                            <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span class="counter">198</span><span>Fan</span></a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span class="counter">220</span><span>Followers</span></a>
-                            <a href="<?php echo site_url('user/uploadForm') ?>" class="google"><i class="fa fa-google" aria-hidden="true"></i><span class="counter">Video</span><span>Upload</span></a>
-                        </div>
-
-                        
-                        <!-- ***** Sidebar Widget ***** -->
-                        <div class="single-widget youtube-channel-widget mb-50">
+                        <div class="single-widget newsletter-widget mb-50">
                             <!-- Section Heading -->
                             <div class="section-heading style-2 mb-30">
-                                <h4>Buat Apaa Gitu</h4>
+                                <h4>Newsletter</h4>
                                 <div class="line"></div>
                             </div>
-                            
+                            <p>Subscribe our newsletter gor get notification about new updates, information discount, etc.</p>
+                            <!-- Newsletter Form -->
+                            <div class="newsletter-form">
+                                <form action="#" method="post">
+                                    <input type="email" name="nl-email" class="form-control mb-15" id="emailnl" placeholder="Enter your email">
+                                    <button type="submit" class="btn vizew-btn w-100">Subscribe</button>
+                                </form>
+                            </div>
                         </div>
 
+                        <!-- ***** Single Widget ***** -->
+                        <div class="single-widget add-widget">
+                            <a href="#"><img src="img/bg-img/add.png" alt=""></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- ##### Archive Grid Posts Area End ##### -->
+    </section>
+    <!-- ##### Contact Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area">
@@ -255,17 +205,91 @@
             <div class="row">
                 <!-- Footer Widget Area -->
                 <div class="col-12 col-sm-6 col-xl-3">
-                
+                    <div class="footer-widget mb-70">
+                        <!-- Logo -->
+                        <a href="index.html" class="foo-logo d-block mb-4"><img src="img/core-img/logo2.png" alt=""></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                        <!-- Footer Newsletter Area -->
+                        <div class="footer-nl-area">
+                            <form action="#" method="post">
+                                <input type="email" name="nl-email" class="form-control" id="nlEmail" placeholder="Your email">
+                                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Footer Widget Area -->
                 <div class="col-12 col-sm-6 col-xl-3">
-                
+                    <div class="footer-widget mb-70">
+                        <h6 class="widget-title">Latest Twister</h6>
+                        <!-- Twitter Slides -->
+                        <div class="twitter-slides owl-carousel">
+
+                            <!-- Single Twitter Slide -->
+                            <div class="single--twitter-slide">
+                                <!-- Single Twit -->
+                                <div class="single-twit">
+                                    <p><i class="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                </div>
+                                <!-- Single Twit -->
+                                <div class="single-twit">
+                                    <p><i class="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                </div>
+                            </div>
+
+                            <!-- Single Twitter Slide -->
+                            <div class="single--twitter-slide">
+                                <!-- Single Twit -->
+                                <div class="single-twit">
+                                    <p><i class="fa fa-twitter"></i> <span>@Colorlib</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                </div>
+                                <!-- Single Twit -->
+                                <div class="single-twit">
+                                    <p><i class="fa fa-twitter"></i> <span>@Colorlib</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Footer Widget Area -->
                 <div class="col-12 col-sm-6 col-xl-3">
-                
+                    <div class="footer-widget mb-70">
+                        <h6 class="widget-title">Sport Videos</h6>
+
+                        <!-- Single Blog Post -->
+                        <div class="single-blog-post d-flex">
+                            <div class="post-thumbnail">
+                                <img src="img/bg-img/1.jpg" alt="">
+                            </div>
+                            <div class="post-content">
+                                <a href="single-post.html" class="post-title">DC Shoes: gymkhana the</a>
+                                <div class="post-meta d-flex justify-content-between">
+                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Blog Post -->
+                        <div class="single-blog-post d-flex">
+                            <div class="post-thumbnail">
+                                <img src="img/bg-img/2.jpg" alt="">
+                            </div>
+                            <div class="post-content">
+                                <a href="single-post.html" class="post-title">Sweet Yummy Chocolatea Tea</a>
+                                <div class="post-meta d-flex justify-content-between">
+                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
                 <!-- Footer Widget Area -->
@@ -329,7 +353,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="<?php echo base_url('asset/js/plugins/plugins.js') ?>"></script>
     <!-- Active js -->
     <script src="<?php echo base_url('asset/js/active.js') ?>"></script>
-    
 </body>
 
 </html>

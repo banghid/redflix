@@ -39,4 +39,11 @@ class User extends CI_Controller {
 	public function uploadForm(){
 		$this->load->view('user/video-upload');
 	}
+
+	public function akun(){
+		$user_id = $this->session->user_id;
+		$email = $this->session->email;
+		$nama = $this->session->nama;
+		$this->load->view('user/akun',array(['user_id'=>$user_id,'email'=>$email,'nama'=>$nama]));
+	}
 }
