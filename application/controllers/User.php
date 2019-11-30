@@ -35,4 +35,8 @@ class User extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect(site_url('home'));
 	}
+
+	public function uploadForm(){
+		$this->load->view('user/video-upload');
+	}
 }
