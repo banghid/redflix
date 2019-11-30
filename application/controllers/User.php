@@ -31,7 +31,9 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-        $this->load->view('user/video-control');
+		$this->load->view('header');
+		$this->load->view('user/video-control');
+		$this->load->view('footer');
 	}
 
 	public function logout(){
@@ -40,9 +42,15 @@ class User extends CI_Controller {
 	}
 
 	public function uploadForm(){
+<<<<<<< HEAD
 		
 		$this->load->view('user/video-upload');
 		
+=======
+		$this->load->view('header');
+		$this->load->view('user/video-upload');
+		$this->load->view('footer');
+>>>>>>> bc4f0eda94342fe807d6c6e9309817a22caceb4c
 	}
 
 public function uploadProcess(){
