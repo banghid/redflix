@@ -59,7 +59,8 @@ class User extends CI_Controller {
 				'location' => $base_location.$file
 			));
 
-			$this->session->set_flashdata("<script> window.alert('Upload success'); </script>")
+			$this->session->set_flashdata("<script> window.alert('Upload success'); </script>");
+			redirect(site_url('user'));
 			
 		}else{
 			$this->load->view('user/video-upload');
