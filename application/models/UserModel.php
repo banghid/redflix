@@ -45,6 +45,10 @@ class UserModel extends CI_Model {
         $this->db->insert($this::TABLE_NAME, $data);
     }
 
+    public function updateData($data){
+        $this->db->update($this::TABLE_NAME, $data)
+                 ->where('user_id',$data->user_id);
+    }
     
 }
 ?>

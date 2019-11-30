@@ -44,6 +44,21 @@ class User extends CI_Controller {
 		$user_id = $this->session->user_id;
 		$email = $this->session->email;
 		$nama = $this->session->nama;
-		$this->load->view('user/akun',array(['user_id'=>$user_id,'email'=>$email,'nama'=>$nama]));
+		$this->load->view('user/akun',array('user_id'=>$user_id,'email'=>$email,'nama'=>$nama));
+
+
 	}
+
+	public function update(){
+        if(isset($_POST['email'])){
+            $data = array(
+				'user_id' => $this->input->post('user_id'),
+                'nama' => $this->input->post('nama'),
+                'email' => $this->input->post('email'),
+                'password' => password_hash( $this->input->post('password'), PASSWORD_DEFAULT)
+            );
+            $this->user->updateData($data);
+            redirect('auth?m=Updated');
+        }else $this->load->view('auth/register');
+    }
 }
