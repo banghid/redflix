@@ -28,7 +28,9 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-        $this->load->view('user/video-control');
+		$this->load->view('header');
+		$this->load->view('user/video-control');
+		$this->load->view('footer');
 	}
 
 	public function logout(){
@@ -37,6 +39,8 @@ class User extends CI_Controller {
 	}
 
 	public function uploadForm(){
+		$this->load->view('header');
 		$this->load->view('user/video-upload');
+		$this->load->view('footer');
 	}
 }
