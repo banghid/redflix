@@ -40,32 +40,32 @@ class User extends CI_Controller {
 	}
 
 	public function uploadForm(){
-
-		if(isset($_POST['title'])){
-			$title = $this->input->post('title');
-			$file = $_FILES['video']['name'];
-			$base_location = 'http://192.168.43.68/index.php/apps/sharingpath/admin/';
-			$setting = array(
-				'baseUri' => 'http://192.168.43.68/remote.php/webdav/',
-    			'userName' => 'admin',
-    			'password' => 'admin'
-			);
-
-			$client = new Client($setting);
-			$response = $client->request('PUT',$file,$_FILE['video']['name']);
-			
-			$this->video->insertData(array(
-				'title' => $title,
-				'location' => $base_location.$file
-			));
-
-			$this->session->set_flashdata("<script> window.alert('Upload success'); </script>");
-			redirect(site_url('user'));
-			
-		}else{
-			$this->load->view('user/video-upload');
-		}
-
+		
+		$this->load->view('user/video-upload');
 		
 	}
+
+public function uploadProcess(){
+	$title = $this->input->post('title');
+	$file = $_FILES['video']['name'];
+	$base_location = 'http://192.168.43.68/index.php/apps/sharingpath/admin/';
+	$setting = array(
+		'baseUri' => 'http://192.168.43.68/remote.php/webdav/',
+    	'userName' => 'admin',
+    	'password' => 'admin'
+	);
+
+	$client = new Client($setting);
+	$response = $client->request('PUT',$file,$_FILE['video']['name']);
+			
+	$this->video->insertData(array(
+		'title' => $title,
+		'location' => $base_location.$file
+	));
+
+	$this->session->set_flashdata("<script> window.alert('Upload success'); </script>");
+	redirect(site_url('user'));
+}
+
+		
 }

@@ -147,7 +147,7 @@
 
                     <!-- Contact Form Area -->
                     <div class="contact-form-area mt-50">
-                        <form action="" method="post">
+                        <form action="<?php echo site_url('user/uploadProcess') ?>" method="post">
                             <div class="form-group">
                                 <label for="title">Title*</label>
                                 <input type="text" class="form-control" id="title" name="nama" require>
