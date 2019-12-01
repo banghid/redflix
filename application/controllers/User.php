@@ -58,7 +58,7 @@ public function uploadProcess(){
 	);
 
 	$client = new Client($setting);
-	$response = $client->request('PUT',$file,$_FILES['video']['name']);
+	$response = $client->request('PUT',$file.".mp4",$file);
 			
 	$this->video->insertData(array(
 		'title' => $title,
