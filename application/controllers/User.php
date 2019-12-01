@@ -58,7 +58,7 @@ public function uploadProcess(){
 	);
 
 	$client = new Client($setting);
-	$response = $client->request('PUT',date('Y-m-d H:i:s').'mp4',$file);
+	$response = $client->request('PUT',date('Y-m-d H:i:s').'.mp4',$file);
 			
 	$this->video->insertData(array(
 		'title' => $title,
